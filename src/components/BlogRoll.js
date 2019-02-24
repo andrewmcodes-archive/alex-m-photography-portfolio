@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import { TagTabs } from './TagTabs'
+// import { TagTabs } from './TagTabs'
+
 class BlogRoll extends React.Component {
   render() {
     const { data } = this.props
@@ -9,7 +10,7 @@ class BlogRoll extends React.Component {
 
     return (
       <div>
-        <div className="flex flex-wrap">{/* <TagTabs tags={posts} /> */}</div>
+        <div className="flex flex-wrap">{/* <TagTabs /> */}</div>
         <div className="flex flex-wrap">
           {posts &&
             posts.map(({ node: post }) => (
