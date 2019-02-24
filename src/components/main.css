@@ -4,6 +4,10 @@
 
 @tailwind utilities;
 
+.h-half-screen {
+  height: 50vh;
+}
+
 .page-center {
   @apply flex flex-col justify-center items-center;
 }

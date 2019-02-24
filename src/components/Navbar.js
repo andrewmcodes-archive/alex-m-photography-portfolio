@@ -32,7 +32,7 @@ const Navbar = class extends React.Component {
             to="/"
             className="flex items-center no-underline text-blue p-4 md:p-8 sm:hover:text-blue antialiased">
             <span className="font-semibold text-xl tracking-wide">
-              Photo Admin
+              AEM Photography
             </span>
           </Link>
           <button

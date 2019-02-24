@@ -11,6 +11,7 @@ export const BlogPostTemplate = ({
   contentComponent,
   description,
   tags,
+  imageUrl,
   title,
   helmet,
 }) => {
@@ -25,6 +26,7 @@ export const BlogPostTemplate = ({
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
+            <img src={imageUrl} alt="" />
             <p> {description} </p> <PostContent content={content} />
             {tags && tags.length ? (
               <div
@@ -53,6 +55,7 @@ BlogPostTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
+  imageUrl: PropTypes.string,
   helmet: PropTypes.object,
 }
 
@@ -76,6 +79,7 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        imageUrl={post.frontmatter.imageUrl}
       />
     </Layout>
   )
@@ -99,6 +103,7 @@ export const pageQuery = graphql`
         title
         description
         tags
+        imageUrl
       }
     }
   }

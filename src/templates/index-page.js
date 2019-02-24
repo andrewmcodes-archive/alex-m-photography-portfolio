@@ -16,15 +16,15 @@ export const IndexPageTemplate = ({
   intro,
   main,
 }) => (
-  <div className="bg-grey-light">
+  <div className="bg-grey-lightest">
     <div
-      className="h-screen"
+      className="h-half-screen"
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
       }}>
-      <div className="h-screen page-center">
+      <div className="h-half-screen page-center">
         <h1 className="">{title}</h1>
         <h3 className="">{subheading}</h3>
       </div>
