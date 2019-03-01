@@ -58,10 +58,6 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:title" content={data.site.siteMetadata.title} />
           <meta property="og:url" content="/" />
           <meta property="og:image" content="/img/og-image.jpg" />
-          <link
-            href="https://fonts.googleapis.com/css?family=Karla"
-            rel="stylesheet"
-          />
         </Helmet>
         <Navbar />
         <div className="">{children}</div>

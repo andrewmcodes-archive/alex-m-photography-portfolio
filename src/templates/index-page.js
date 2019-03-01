@@ -19,7 +19,7 @@ export const IndexPageTemplate = ({ image, title, subheading }) => (
           src={logo}
           alt="AEM Photography"
           style={{ width: '14em', height: '10em' }}
-          className="mb-12"
+          className="mb-12 logo-font"
         />
         <h4 className="invisible text-white pb-2 align-baseline font-light tracking-wide leading-loose">
           {subheading}

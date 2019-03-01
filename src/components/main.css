@@ -4,12 +4,19 @@
 
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
 .h-half-screen {
   height: 50vh;
 }
 
 .h-three-quarter-screen {
   height: 75vh;
+}
+
+.logo-font {
+  font-family: 'Karla',
+    sans-serif;
 }
 
 .page-center {
