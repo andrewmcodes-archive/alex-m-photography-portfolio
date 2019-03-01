@@ -16,7 +16,7 @@ class BlogRoll extends React.Component {
                 className="w-1/2 h-128 bg-cover bg-center"
                 key={post.id}
                 style={{
-                  backgroundImage: `url(${post.frontmatter.imageUrl})`,
+                  backgroundImage: `url("${post.frontmatter.imageUrl}")`,
                 }}
               />
             ))}
