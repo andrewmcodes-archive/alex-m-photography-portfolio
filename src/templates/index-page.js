@@ -51,7 +51,7 @@ export const IndexPageTemplate = ({
       <div className="">
         <h1 className="text-center mb-2">Latest stories</h1>
         <TagTabs />
-        <BlogRoll />
+
         <div className="my-4 w-full text-center">
           <Link className="btn btn-blue" to="/blog">
             Read more
