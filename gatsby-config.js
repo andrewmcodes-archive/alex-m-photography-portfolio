@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'photo-admin-v2',
-    description: 'Gatsby, TailwindCSS, and Netlify CMS Photo Website v2',
+    title: 'AEM Photography',
+    description: "Alex McCutcheon's Photography Portfolio",
   },
   plugins: [
     'gatsby-plugin-postcss',
