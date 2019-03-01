@@ -22,21 +22,31 @@ const Navbar = class extends React.Component {
     const el = document.getElementById('nav')
     el.classList.toggle('block')
     el.classList.toggle('hidden')
+    el.classList.toggle('shadow-inner')
+    const el2 = document.getElementById('navbar')
+    el2.classList.toggle('bg-white')
+    const el3 = document.getElementById('nav-brand')
+    el3.classList.toggle('text-blue-darker')
+    const el4 = document.getElementById('nav-btn')
+    el4.classList.toggle('border-blue-darker')
+    el4.classList.toggle('text-blue-darker')
   }
 
   render() {
     return (
-      <nav className="z-10 absolute w-full md:mb-16">
+      <nav id="navbar" className="z-10 absolute w-full md:mb-16">
         <div className="flex flex-wrap items-center justify-between max-w-4xl mx-auto ">
           <Link
             to="/"
+            id="nav-brand"
             className="flex items-center no-underline text-white p-4 md:p-8 sm:hover:text-white antialiased">
             <span className="font-semibold text-xl tracking-wide">
               AEM Photography
             </span>
           </Link>
           <button
-            className="mr-4 sm:mr-8 block sm:hidden border border-white hover:bg-white hover:text-grey-lightest focus:bg-blue-darker focus:text-grey-lightest flex items-center px-3 py-2 rounded text-white"
+            id="nav-btn"
+            className="mr-4 sm:mr-8 block sm:hidden border border-white hover:bg-white hover:text-blue-darkest focus:bg-blue-darker focus:text-grey-lightest flex items-center px-3 py-2 rounded text-white"
             onClick={this.toggleNavbar}>
             <svg
               className="fill-current h-3 w-3"

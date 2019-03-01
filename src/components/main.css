@@ -12,11 +12,6 @@
   height: 75vh;
 }
 
-.hero-image {
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-}
-
 .page-center {
   @apply flex flex-col justify-center items-center;
 }
