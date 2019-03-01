@@ -32,7 +32,7 @@ export const IndexPageTemplate = ({ image, title, subheading }) => (
         <BlogRoll />
         <div className="my-8 sm:my-16 w-full text-center">
           <Link className="btn btn-blue" to="/blog">
-            See more
+            View all photos
           </Link>
         </div>
       </div>
