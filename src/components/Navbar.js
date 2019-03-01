@@ -62,6 +62,12 @@ const Navbar = class extends React.Component {
                 onClick={this.toggleNavbar}>
                 About
               </Link>
+              <Link
+                to="/blog"
+                className="antialiased block sm:inline-block py-6 sm:hover:bg-grey-lightest sm:hover:text-blue hover:bg-blue hover:text-white sm:mt-0 sm:mr-12 no-underline text-blue shadow-inner sm:shadow-none"
+                onClick={this.toggleNavbar}>
+                Blog
+              </Link>
             </div>
           </div>
         </div>

@@ -14,7 +14,7 @@ export const IndexPageTemplate = ({ image, title, subheading }) => (
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
       }}>
-      <div className="h-half-screen page-center">
+      <div className="h-half-screen page-center px-2 text-center">
         <img
           src={logo}
           alt="AEM Photography"
@@ -22,12 +22,14 @@ export const IndexPageTemplate = ({ image, title, subheading }) => (
           className="mb-8"
         />
         <h1 className="text-white pb-2">{title}</h1>
-        <h2 className="text-white">{subheading}</h2>
+        <h4 className="text-white">{subheading}</h4>
       </div>
     </div>
     <section className="d-container">
       <div className="">
-        <h1 className="text-center mb-2">Latest stories</h1>
+        <div className="text-center m-8">
+          <h1 className="">Photo Gallery</h1>
+        </div>
         <BlogRoll />
         <div className="my-4 w-full text-center">
           <Link className="btn btn-blue" to="/blog">
@@ -92,20 +94,6 @@ export const pageQuery = graphql`
         heading
         subheading
         description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
       }
     }
   }

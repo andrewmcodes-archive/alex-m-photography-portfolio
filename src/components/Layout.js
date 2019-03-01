@@ -20,7 +20,7 @@ const TemplateWrapper = ({ children }) => (
       }
     `}
     render={data => (
-      <div>
+      <div className="min-h-screen flex flex-col justify-between">
         <Helmet>
           <html lang="en" />
           <title>{data.site.siteMetadata.title}</title>
@@ -60,7 +60,7 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>
         <Navbar />
-        <div>{children}</div>
+        <div className="nav-spacer">{children}</div>
         <Footer />
       </div>
     )}

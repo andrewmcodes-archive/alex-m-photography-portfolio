@@ -43,3 +43,13 @@
 .link {
   @apply no-underline text-blue;
 }
+
+.nav-spacer {
+  margin-top: 55px;
+}
+
+@screen sm {
+  .nav-space {
+    margin-top: 87px;
+  }
+}
