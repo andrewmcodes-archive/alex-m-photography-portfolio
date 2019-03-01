@@ -52,19 +52,19 @@ const Navbar = class extends React.Component {
             <div className="text-sm font-semibold">
               <Link
                 to="/"
-                className="antialiased block py-6 sm:hover:bg-grey-lightest sm:hover:text-blue-darkest sm:inline-block sm:mt-0 sm:mr-12 no-underline text-blue-darker sm:text-white shadow-inner sm:shadow-none"
+                className="antialiased block py-6 sm:inline-block sm:mt-0 sm:mr-12 no-underline text-blue-darker sm:text-white"
                 onClick={this.toggleNavbar}>
                 Home
               </Link>
               <Link
                 to="/about"
-                className="antialiased block sm:inline-block py-6 sm:hover:bg-grey-lightest sm:hover:text-blue-darkest sm:mt-0 sm:mr-12 no-underline text-blue-darker sm:text-white shadow-inner sm:shadow-none"
+                className="antialiased block sm:inline-block py-6 sm:mt-0 sm:mr-12 no-underline text-blue-darker sm:text-white"
                 onClick={this.toggleNavbar}>
                 About
               </Link>
               <Link
                 to="/blog"
-                className="antialiased block sm:inline-block py-6 sm:hover:bg-grey-lightest sm:hover:text-blue-darkest sm:mt-0 sm:mr-12 no-underline text-blue-darker sm:text-white shadow-inner sm:shadow-none"
+                className="antialiased block sm:inline-block py-6 sm:mt-0 sm:mr-12 no-underline text-blue-darker sm:text-white"
                 onClick={this.toggleNavbar}>
                 Blog
               </Link>
