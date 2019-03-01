@@ -67,6 +67,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-purgecss',
       options: {
+        tailwind: true,
+        whitelist: ['background'],
         // develop: true,
         // purgeOnly: ['/main.css'],
       },
