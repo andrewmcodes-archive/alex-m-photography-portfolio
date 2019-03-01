@@ -13,7 +13,7 @@ class BlogRoll extends React.Component {
           {posts &&
             posts.map(({ node: post }) => (
               <div
-                className="w-1/2 min-w-32 h-128 bg-cover bg-center"
+                className="w-full sm:w-1/2 h-128 bg-cover bg-center"
                 key={post.id}
                 style={{
                   background: `url(${post.frontmatter.imageUrl})`,
