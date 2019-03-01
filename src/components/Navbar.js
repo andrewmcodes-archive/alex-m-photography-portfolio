@@ -26,17 +26,17 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <nav className="bg-white shadow-md z-10 absolute w-full md:mb-16">
+      <nav className="z-10 absolute w-full md:mb-16">
         <div className="flex flex-wrap items-center justify-between max-w-4xl mx-auto ">
           <Link
             to="/"
-            className="flex items-center no-underline text-blue-darker p-4 md:p-8 sm:hover:text-blue-darker antialiased">
+            className="flex items-center no-underline text-white p-4 md:p-8 sm:hover:text-white antialiased">
             <span className="font-semibold text-xl tracking-wide">
               AEM Photography
             </span>
           </Link>
           <button
-            className="mr-4 sm:mr-8 block sm:hidden border border-blue-darker hover:bg-blue-darker hover:text-grey-lightest focus:bg-blue-darker focus:text-grey-lightest flex items-center px-3 py-2 rounded text-blue-darker"
+            className="mr-4 sm:mr-8 block sm:hidden border border-white hover:bg-white hover:text-grey-lightest focus:bg-blue-darker focus:text-grey-lightest flex items-center px-3 py-2 rounded text-white"
             onClick={this.toggleNavbar}>
             <svg
               className="fill-current h-3 w-3"
@@ -52,19 +52,19 @@ const Navbar = class extends React.Component {
             <div className="text-sm font-semibold">
               <Link
                 to="/"
-                className="antialiased block py-6 sm:hover:bg-grey-lightest sm:hover:text-blue-darkest sm:inline-block sm:mt-0 sm:mr-12 no-underline text-blue-darker shadow-inner sm:shadow-none"
+                className="antialiased block py-6 sm:hover:bg-grey-lightest sm:hover:text-blue-darkest sm:inline-block sm:mt-0 sm:mr-12 no-underline text-blue-darker sm:text-white shadow-inner sm:shadow-none"
                 onClick={this.toggleNavbar}>
                 Home
               </Link>
               <Link
                 to="/about"
-                className="antialiased block sm:inline-block py-6 sm:hover:bg-grey-lightest sm:hover:text-blue-darkest sm:mt-0 sm:mr-12 no-underline text-blue-darker shadow-inner sm:shadow-none"
+                className="antialiased block sm:inline-block py-6 sm:hover:bg-grey-lightest sm:hover:text-blue-darkest sm:mt-0 sm:mr-12 no-underline text-blue-darker sm:text-white shadow-inner sm:shadow-none"
                 onClick={this.toggleNavbar}>
                 About
               </Link>
               <Link
                 to="/blog"
-                className="antialiased block sm:inline-block py-6 sm:hover:bg-grey-lightest sm:hover:text-blue-darkest sm:mt-0 sm:mr-12 no-underline text-blue-darker shadow-inner sm:shadow-none"
+                className="antialiased block sm:inline-block py-6 sm:hover:bg-grey-lightest sm:hover:text-blue-darkest sm:mt-0 sm:mr-12 no-underline text-blue-darker sm:text-white shadow-inner sm:shadow-none"
                 onClick={this.toggleNavbar}>
                 Blog
               </Link>

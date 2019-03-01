@@ -10,7 +10,7 @@ tags:
   - green beans
   - flavor
   - tasting
-imageUrl: https://images.unsplash.com/photo-1550951957-b8c9978c0124?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
+imageUrl: https://images.unsplash.com/photo-1551171129-7ebac0152f60?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80
 ---
 
 We expect the shipment of a limited quantity of green beans next Monday. We’ll be offering the roasted beans from Tuesday, but quantities are limited, so be quick.

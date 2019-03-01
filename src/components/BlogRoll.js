@@ -10,23 +10,10 @@ class BlogRoll extends React.Component {
 
     return (
       <div>
-        <div className="flex flex-wrap">{/* <TagTabs /> */}</div>
         <div className="flex flex-wrap">
           {posts &&
             posts.map(({ node: post }) => (
               <div className="w-1/2" key={post.id}>
-                {/* <Link
-                    className="text-2xl no-underline text-black mb-1"
-                    to={post.fields.slug}>
-                    {post.frontmatter.title}
-                  </Link>
-
-                  <p className="text-sm mb-4">{post.frontmatter.date}</p>
-
-                  <p className="leading-normal mb-4">{post.excerpt}</p>
-                  <Link className="btn btn-blue" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link> */}
                 <img
                   src={post.frontmatter.imageUrl}
                   alt=""

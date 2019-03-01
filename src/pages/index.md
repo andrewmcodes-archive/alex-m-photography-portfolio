@@ -1,16 +1,16 @@
 ---
 templateKey: 'index-page'
-title: 'Welcome to my site!'
+title: "capturing life's perfect moments"
 image: /img/home-jumbotron.jpg
-heading: Welcome to my site!
-subheading: blah blah subheading
+heading: capturing life's perfect moments
+subheading: '[ Alex E. McCutcheon Photography]'
 description: >-
   Kaldi is the ultimate spot for coffee lovers who want to learn about their
   java’s origin and support the farmers that grew it. We take coffee production,
   roasting and brewing seriously and we’re glad to pass that knowledge to
   anyone.
 main:
-  heading: Welcome to my site!
+  heading: "capturing life's perfect moments"
   description: >
     We hold our coffee to the highest standards from the shrub to the cup.
     That’s why we’re meticulous and transparent about each step of the coffee’s

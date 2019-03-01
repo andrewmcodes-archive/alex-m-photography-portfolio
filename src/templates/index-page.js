@@ -6,30 +6,32 @@ import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 
 export const IndexPageTemplate = ({ image, title, subheading }) => (
-  <div className="bg-grey-lightest">
+  <div className="bg-black">
     <div
-      className="h-half-screen"
+      className="h-three-quarter-screen sm:h-screen"
       style={{
         backgroundImage: `url(${
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
       }}>
-      <div className="h-half-screen page-center px-2 text-center">
+      <div className="h-three-quarter-screen sm:h-screen sm:flex sm:justify-end page-center px-2 text-center">
         <img
           src={logo}
           alt="AEM Photography"
           style={{ width: '14em', height: '10em' }}
-          className="mb-8"
+          className="mb-12"
         />
-        <h1 className="text-white pb-2">{title}</h1>
-        <h4 className="text-white">{subheading}</h4>
+        <h4 className="sm:invisible text-white pb-2 align-baseline font-light tracking-wide leading-loose">
+          {subheading}
+        </h4>
+        <h1 className="sm:invisible text-white font-lg">{title}</h1>
       </div>
     </div>
     <section className="d-container">
-      <div className="">
-        <div className="text-center m-8">
-          <h1 className="text-blue-darker">Photo Gallery</h1>
-        </div>
+      <div className="shadow-lg">
+        {/* <div className="text-center m-8">
+          <h1 className="text-white">Photo Gallery</h1>
+        </div> */}
         <BlogRoll />
         <div className="my-4 w-full text-center">
           <Link className="btn btn-blue" to="/blog">

@@ -60,7 +60,7 @@ const TemplateWrapper = ({ children }) => (
           <meta property="og:image" content="/img/og-image.jpg" />
         </Helmet>
         <Navbar />
-        <div className="nav-spacer">{children}</div>
+        <div className="">{children}</div>
         <Footer />
       </div>
     )}

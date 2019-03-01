@@ -8,6 +8,10 @@
   height: 50vh;
 }
 
+.h-three-quarter-screen {
+  height: 75vh;
+}
+
 .hero-image {
   filter: blur(8px);
   -webkit-filter: blur(8px);
