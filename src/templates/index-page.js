@@ -30,7 +30,7 @@ export const IndexPageTemplate = ({ image, title, subheading }) => (
     <section className="d-container">
       <div className="shadow-lg h-full">
         <BlogRoll />
-        <div className="my-8 w-full text-center">
+        <div className="my-8 sm:my-16 w-full text-center">
           <Link className="btn btn-blue" to="/blog">
             See more
           </Link>

@@ -22,14 +22,17 @@ const Navbar = class extends React.Component {
     const el = document.getElementById('nav')
     el.classList.toggle('block')
     el.classList.toggle('hidden')
-    el.classList.toggle('shadow-inner')
-    const el2 = document.getElementById('navbar')
-    el2.classList.toggle('bg-white')
-    const el3 = document.getElementById('nav-brand')
-    el3.classList.toggle('text-blue-darker')
-    const el4 = document.getElementById('nav-btn')
-    el4.classList.toggle('border-blue-darker')
-    el4.classList.toggle('text-blue-darker')
+    console.log(window.outerWidth)
+    if (window.outerWidth <= 589) {
+      el.classList.toggle('shadow-inner')
+      const el2 = document.getElementById('navbar')
+      el2.classList.toggle('bg-white')
+      const el3 = document.getElementById('nav-brand')
+      el3.classList.toggle('text-blue-darker')
+      const el4 = document.getElementById('nav-btn')
+      el4.classList.toggle('border-blue-darker')
+      el4.classList.toggle('text-blue-darker')
+    }
   }
 
   render() {
