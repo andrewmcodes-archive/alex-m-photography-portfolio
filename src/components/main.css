@@ -39,3 +39,7 @@
     @apply w-2/3;
   }
 }
+
+.link {
+  @apply no-underline text-blue;
+}
