@@ -1,20 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-
+import logo from '../img/logo/white-logo.svg'
 import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 
-export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
-  main,
-}) => (
+export const IndexPageTemplate = ({ image, title, subheading }) => (
   <div className="bg-grey-lightest">
     <div
       className="h-half-screen"
@@ -24,8 +15,14 @@ export const IndexPageTemplate = ({
         })`,
       }}>
       <div className="h-half-screen page-center">
-        <h1 className="">{title}</h1>
-        <h3 className="">{subheading}</h3>
+        <img
+          src={logo}
+          alt="AEM Photography"
+          style={{ width: '14em', height: '10em' }}
+          className="mb-8"
+        />
+        <h1 className="text-white pb-2">{title}</h1>
+        <h2 className="text-white">{subheading}</h2>
       </div>
     </div>
     <section className="d-container">
