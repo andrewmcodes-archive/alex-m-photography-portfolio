@@ -6,7 +6,7 @@ import Instagram from '../img/social/instagram-icon'
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="p-4 sm:p-8 bg-black shadow-inner">
+      <footer className="p-4 sm:p-8 bg-black">
         <div className="w-full flex flex-col sm:flex-row-reverse justify-between">
           <div className="mx-auto sm:mx-0 w-1/2 flex justify-between self-center sm:justify-end mb-4 sm:mb-0">
             <a title="facebook" href="https://facebook.com" className="px-4">
