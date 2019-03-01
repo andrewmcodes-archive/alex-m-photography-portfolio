@@ -29,9 +29,6 @@ export const IndexPageTemplate = ({ image, title, subheading }) => (
     </div>
     <section className="d-container">
       <div className="shadow-lg h-full">
-        {/* <div className="text-center m-8">
-          <h1 className="text-white">Photo Gallery</h1>
-        </div> */}
         <BlogRoll />
         <div className="my-8 w-full text-center">
           <Link className="btn btn-blue" to="/blog">

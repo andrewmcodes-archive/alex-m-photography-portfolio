@@ -7,10 +7,10 @@ export default class BlogIndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <section className="section">
-          <div className="container mx-auto">
+        <section className="section nav-spacer">
+          <div className="">
             <div className="text-center m-8">
-              <h1 className="">Photo Gallery</h1>
+              <h1 className="pt-16 pb-8 text-white">Photo Gallery</h1>
             </div>
             <BlogRoll />
           </div>

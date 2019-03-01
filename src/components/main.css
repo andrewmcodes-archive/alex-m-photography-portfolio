@@ -12,6 +12,10 @@
   height: 75vh;
 }
 
+.about-height {
+  height: 84vh;
+}
+
 .page-center {
   @apply flex flex-col justify-center items-center;
 }
@@ -32,18 +36,6 @@
   @apply w-full mx-auto;
 }
 
-@screen sm {
-  .d-container {
-    @apply w-3/4;
-  }
-}
-
-@screen md {
-  .d-container {
-    @apply w-2/3;
-  }
-}
-
 .link {
   @apply no-underline text-blue-darker;
 }
@@ -53,7 +45,13 @@
 }
 
 @screen sm {
-  .nav-space {
+  .nav-spacer {
+    margin-top: 64px;
+  }
+}
+
+@screen md {
+  .nav-spacer {
     margin-top: 87px;
   }
 }

@@ -12,15 +12,13 @@ class BlogRoll extends React.Component {
         <div className="flex flex-wrap">
           {posts &&
             posts.map(({ node: post }) => (
-              <div className="w-1/2" key={post.id}>
-                <img
-                  src={post.frontmatter.imageUrl}
-                  alt=""
-                  width="200px"
-                  height=""
-                  className="w-full h-full"
-                />
-              </div>
+              <div
+                className="w-1/2 h-128 bg-cover bg-center"
+                key={post.id}
+                style={{
+                  backgroundImage: `url(${post.frontmatter.imageUrl})`,
+                }}
+              />
             ))}
         </div>
       </div>

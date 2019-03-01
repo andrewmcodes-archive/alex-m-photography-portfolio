@@ -8,20 +8,12 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
-          </div>
-        </div>
+    <div className="about-height nav-spacer bg-white">
+      <div className="py-8 leading-loose mx-auto w-full sm:w-3/4 md:w-2/3">
+        <h1 className="text-center mb-4">{title}</h1>
+        <PageContent className="content h-full" content={content} />
       </div>
-    </section>
+    </div>
   )
 }
 
