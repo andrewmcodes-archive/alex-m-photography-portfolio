@@ -8,16 +8,6 @@ const FeatureGrid = ({ gridItems }) => (
       <div className="w-1/2">
         <div key={item.text} className="m-2 rounded bg-white shadow-md">
           <div className="p-4">
-            {/* <div className="text-center">
-            <div
-              style={{
-                width: '240px',
-                display: 'inline-block',
-              }}
-            >
-              <PreviewCompatibleImage imageInfo={item} />
-            </div>
-          </div> */}
             <p>{item.text}</p>
           </div>
         </div>

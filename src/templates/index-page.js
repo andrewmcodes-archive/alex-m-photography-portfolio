@@ -1,22 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-
+import logo from '../img/logo/white-logo.svg'
 import Layout from '../components/Layout'
-import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
-import TagTabs from '../components/TagTabs'
 
-export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
-  main,
-}) => (
+export const IndexPageTemplate = ({ image, title, subheading }) => (
   <div className="bg-grey-lightest">
     <div
       className="h-half-screen"
@@ -26,31 +15,19 @@ export const IndexPageTemplate = ({
         })`,
       }}>
       <div className="h-half-screen page-center">
-        <h1 className="">{title}</h1>
-        <h3 className="">{subheading}</h3>
+        <img
+          src={logo}
+          alt="AEM Photography"
+          style={{ width: '14em', height: '10em' }}
+          className="mb-8"
+        />
+        <h1 className="text-white pb-2">{title}</h1>
+        <h2 className="text-white">{subheading}</h2>
       </div>
     </div>
     <section className="d-container">
-      {/* <div className="py-4">
-        <h1 className="text-center mb-2">{mainpitch.title}</h1>
-        <h3 className="">{mainpitch.description}</h3>
-      </div> */}
-
-      {/* <div className="p-4">
-          <h3 className="text-center">{heading}</h3>
-          <p>{description}</p>
-        </div> */}
-      {/*
-      <Features gridItems={intro.blurbs} />
-
-      <div className="my-4 w-full text-center">
-        <Link className="btn btn-blue" to="/products">
-          See all products
-        </Link>
-      </div> */}
       <div className="">
         <h1 className="text-center mb-2">Latest stories</h1>
-        <TagTabs />
         <BlogRoll />
         <div className="my-4 w-full text-center">
           <Link className="btn btn-blue" to="/blog">
@@ -67,7 +44,6 @@ IndexPageTemplate.propTypes = {
   title: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array,
@@ -84,7 +60,6 @@ const IndexPage = ({ data }) => {
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
         intro={frontmatter.intro}
       />
@@ -116,10 +91,6 @@ export const pageQuery = graphql`
         }
         heading
         subheading
-        mainpitch {
-          title
-          description
-        }
         description
         intro {
           blurbs {
