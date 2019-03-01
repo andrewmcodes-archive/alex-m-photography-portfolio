@@ -17,15 +17,15 @@
 }
 
 .btn {
-  @apply font-bold py-2 px-4 rounded no-underline;
+  @apply font-semibold py-2 px-4 rounded no-underline;
 }
 
 .btn-blue {
-  @apply bg-blue text-white;
+  @apply bg-grey-darkest text-white;
 }
 
 .btn-blue:hover {
-  @apply bg-blue-dark;
+  @apply bg-black shadow-md;
 }
 
 .d-container {
