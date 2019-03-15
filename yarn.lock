@@ -2357,7 +2357,7 @@ chokidar@^1.7.0:
   optionalDependencies:
     fsevents "^1.0.0"
 
-chokidar@^2.0.0, chokidar@^2.0.2, chokidar@^2.0.3:
+chokidar@^2.0.0, chokidar@^2.0.2, chokidar@^2.0.3, chokidar@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.1.2.tgz#9c23ea40b01638439e0513864d362aeacc5ad058"
   dependencies:
@@ -4949,14 +4949,15 @@ gatsby-remark-relative-images@^0.2.1:
     slash "2.0.0"
     unist-util-select "1.5.0"
 
-gatsby-source-filesystem@^2.0.12:
-  version "2.0.20"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.20.tgz#0bb3dcf905c6856d87e7a44d73bd8ff056cd5b95"
+gatsby-source-filesystem@^2.0.26:
+  version "2.0.26"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.0.26.tgz#246cc36ba99423fa3e2e683a803fae809c36efd4"
+  integrity sha512-UrGTj+ywvjAf7KAWQ4oQ4y/5uR5r6WdHY5nhYlf+dhRN0J4DXPhE3oCmaGcW5yvY57Qg3wrVKllPZcReEOcj2w==
   dependencies:
     "@babel/runtime" "^7.0.0"
     better-queue "^3.8.7"
     bluebird "^3.5.0"
-    chokidar "^1.7.0"
+    chokidar "^2.1.2"
     file-type "^10.2.0"
     fs-extra "^5.0.0"
     got "^7.1.0"
