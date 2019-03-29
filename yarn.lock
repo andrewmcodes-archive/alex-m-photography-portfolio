@@ -617,13 +617,7 @@
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2":
-  version "7.3.1"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.3.1.tgz#574b03e8e8a9898eaf4a872a92ea20b7846f6f2a"
-  dependencies:
-    regenerator-runtime "^0.12.0"
-
-"@babel/runtime@^7.2.0":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0":
   version "7.4.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.2.tgz#f5ab6897320f16decd855eed70b705908a313fe8"
   integrity sha512-7Bl2rALb7HpvXFL7TETNzKSAeBVCPHELzc0C//9FCxN8nsiueWSJBqaF+2oIJScyILStASR/Cx5WMkXGYTiJFA==
@@ -4904,10 +4898,10 @@ gatsby-plugin-page-creator@^2.0.10:
     parse-filepath "^1.0.1"
     slash "^1.0.0"
 
-gatsby-plugin-postcss@^2.0.5:
-  version "2.0.5"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-postcss/-/gatsby-plugin-postcss-2.0.5.tgz#e4874d47e1ecfafc21c03e27a2031d61c8eacec1"
-  integrity sha512-t31e5F/b7ZDFOCAQ6CMPkNVCdwxWtiTl1PTY5nNWm5W0UI3wtDEJc75mZ+0Z0tf+uxb0KdYeUYygCX2xj1IFmA==
+gatsby-plugin-postcss@^2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-postcss/-/gatsby-plugin-postcss-2.0.7.tgz#609454ac1ece98b9e80b18041e286d08f369046e"
+  integrity sha512-rzQ+BmhAlct5vGJwTpl0wveJuE6oD6CiKCU/7Ax1/EF3YTueDgO14UgYWX4XLxEL4KgDSXWkN7xpMcV2CkPcxA==
   dependencies:
     "@babel/runtime" "^7.0.0"
     postcss-loader "^3.0.0"
