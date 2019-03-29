@@ -43,7 +43,7 @@ const Navbar = class extends React.Component {
             to="/"
             id="nav-brand"
             className="flex items-center no-underline text-white p-4 md:p-8 sm:hover:text-white antialiased">
-            <span className="font-semibold text-xl tracking-wide">
+            <span className="font-semibold text-xl tracking-wider">
               AEM Photography
             </span>
           </Link>

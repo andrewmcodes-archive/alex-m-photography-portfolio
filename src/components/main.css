@@ -1,4 +1,4 @@
-@tailwind preflight;
+@tailwind base;
 
 @tailwind components;
 
@@ -21,7 +21,7 @@
 }
 
 .btn {
-  @apply font-semibold tracking-wide py-4 px-6 rounded no-underline uppercase;
+  @apply font-semibold tracking-wider py-4 px-6 rounded no-underline uppercase;
 }
 
 .btn-blue {

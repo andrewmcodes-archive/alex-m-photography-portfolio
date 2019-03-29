@@ -21,7 +21,7 @@ export const IndexPageTemplate = ({ image, title, subheading }) => (
           style={{ width: '14em', height: '10em' }}
           className="mb-12"
         />
-        <h4 className="invisible text-white pb-2 align-baseline font-light tracking-wide leading-loose">
+        <h4 className="invisible text-white pb-2 align-baseline font-light tracking-wider leading-loose">
           {subheading}
         </h4>
         <h1 className="invisible text-white font-lg">{title}</h1>
