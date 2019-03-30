@@ -64,15 +64,15 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
-    {
-      resolve: 'gatsby-plugin-purgecss',
-      options: {
-        tailwind: true,
-        whitelist: ['background'],
-        // develop: true,
-        // purgeOnly: ['/main.css'],
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-purgecss',
+    //   options: {
+    //     tailwind: true,
+    //     whitelist: ['background'],
+    //     // develop: true,
+    //     // purgeOnly: ['/main.css'],
+    //   },
+    // },
     'gatsby-plugin-netlify',
   ],
 }
