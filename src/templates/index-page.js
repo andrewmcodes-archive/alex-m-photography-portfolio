@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 
 export const IndexPageTemplate = ({ image, title, subheading }) => (
-  <div className="bg-grey-lightest">
+  <div className="">
     <div
       className="h-three-quarter-screen sm:h-screen"
       style={{
@@ -21,7 +21,7 @@ export const IndexPageTemplate = ({ image, title, subheading }) => (
           style={{ width: '14em', height: '10em' }}
           className="mb-12"
         />
-        <h4 className="invisible text-white pb-2 align-baseline font-light tracking-wider leading-loose">
+        <h4 className="invisible text-white pb-2 align-baseline font-300 tracking-wider leading-loose">
           {subheading}
         </h4>
         <h1 className="invisible text-white font-lg">{title}</h1>

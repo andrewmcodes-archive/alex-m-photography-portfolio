@@ -1,8 +1,8 @@
-@import "tailwindcss/base";
+@tailwind base;
 
-@import "tailwindcss/components";
+@tailwind components;
 
-@import "tailwindcss/utilities";
+@tailwind utilities;
 
 .h-half-screen {
   height: 50vh;
@@ -25,23 +25,23 @@
 }
 
 .btn-blue {
-  @apply bg-grey-darkest text-white;
+  @apply bg-gray-900 text-white;
 }
 
 .btn-blue:hover {
-  @apply bg-black shadow-md;
-}
-
-.d-container {
-  @apply w-full mx-auto;
+  @apply bg-gray-900 shadow-md;
 }
 
 .link {
-  @apply no-underline text-blue-darker;
+  @apply no-underline text-blue-700;
 }
 
 .nav-spacer {
   margin-top: 55px;
+}
+
+.d-container {
+  @apply w-full mx-auto;
 }
 
 @screen sm {
@@ -61,4 +61,8 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+h1 {
+  @apply text-4xl font-bold;
 }
