@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 import BlogRoll from '../components/BlogRoll'
 
 export const IndexPageTemplate = ({ image, title, subheading }) => (
-  <div className="">
+  <div className="bg-grey-100">
     <div
       className="h-three-quarter-screen sm:h-screen"
       style={{
@@ -28,7 +28,7 @@ export const IndexPageTemplate = ({ image, title, subheading }) => (
       </div>
     </div>
     <section className="d-container">
-      <div className="shadow-lg h-full">
+      <div className="h-full">
         <BlogRoll />
         <div className="my-8 sm:my-16 w-full text-center">
           <Link className="btn btn-blue" to="/blog">

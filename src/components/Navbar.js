@@ -28,10 +28,10 @@ const Navbar = class extends React.Component {
       const el2 = document.getElementById('navbar')
       el2.classList.toggle('bg-white')
       const el3 = document.getElementById('nav-brand')
-      el3.classList.toggle('text-blue-700')
+      el3.classList.toggle('text-indigo-600')
       const el4 = document.getElementById('nav-btn')
-      el4.classList.toggle('border-blue-700')
-      el4.classList.toggle('text-blue-700')
+      el4.classList.toggle('border-indigo-600')
+      el4.classList.toggle('text-indigo-600')
     }
   }
 
