@@ -28,28 +28,28 @@ const Navbar = class extends React.Component {
       const el2 = document.getElementById('navbar')
       el2.classList.toggle('bg-white')
       const el3 = document.getElementById('nav-brand')
-      el3.classList.toggle('text-blue-darker')
+      el3.classList.toggle('text-indigo-600')
       const el4 = document.getElementById('nav-btn')
-      el4.classList.toggle('border-blue-darker')
-      el4.classList.toggle('text-blue-darker')
+      el4.classList.toggle('border-indigo-600')
+      el4.classList.toggle('text-indigo-600')
     }
   }
 
   render() {
     return (
       <nav id="navbar" className="z-10 absolute w-full md:mb-16">
-        <div className="flex flex-wrap items-center justify-between max-w-4xl mx-auto ">
+        <div className="flex flex-wrap items-center justify-between max-w-6xl mx-auto ">
           <Link
             to="/"
             id="nav-brand"
             className="flex items-center no-underline text-white p-4 md:p-8 sm:hover:text-white antialiased">
-            <span className="font-semibold text-xl tracking-wide">
+            <span className="font-semibold text-xl tracking-wider">
               AEM Photography
             </span>
           </Link>
           <button
             id="nav-btn"
-            className="mr-4 sm:mr-8 block sm:hidden border border-white hover:bg-white hover:text-blue-darkest focus:bg-blue-darker focus:text-grey-lightest flex items-center px-3 py-2 rounded text-white"
+            className="mr-4 sm:mr-8 block sm:hidden border border-white hover:bg-white hover:text-blue-900 focus:bg-blue-700 focus:text-gray-100 flex items-center px-3 py-2 rounded text-white"
             onClick={this.toggleNavbar}>
             <svg
               className="fill-current h-3 w-3"
@@ -65,19 +65,19 @@ const Navbar = class extends React.Component {
             <div className="text-sm font-semibold">
               <Link
                 to="/"
-                className="antialiased block py-6 sm:inline-block sm:mt-0 sm:mr-12 no-underline text-blue-darker sm:text-white"
+                className="antialiased block py-6 sm:inline-block sm:mt-0 sm:mr-12 no-underline text-blue-700 sm:text-white"
                 onClick={this.toggleNavbar}>
                 Home
               </Link>
               <Link
                 to="/about"
-                className="antialiased block sm:inline-block py-6 sm:mt-0 sm:mr-12 no-underline text-blue-darker sm:text-white"
+                className="antialiased block sm:inline-block py-6 sm:mt-0 sm:mr-12 no-underline text-blue-700 sm:text-white"
                 onClick={this.toggleNavbar}>
                 About
               </Link>
               <Link
                 to="/blog"
-                className="antialiased block sm:inline-block py-6 sm:mt-0 sm:mr-12 no-underline text-blue-darker sm:text-white"
+                className="antialiased block sm:inline-block py-6 sm:mt-0 sm:mr-12 no-underline text-blue-700 sm:text-white"
                 onClick={this.toggleNavbar}>
                 Blog
               </Link>

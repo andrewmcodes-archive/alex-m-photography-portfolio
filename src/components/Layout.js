@@ -20,7 +20,7 @@ const TemplateWrapper = ({ children }) => (
       }
     `}
     render={data => (
-      <div className="min-h-screen flex flex-col justify-between bg-black">
+      <div className="min-h-screen flex flex-col justify-between bg-gray-900">
         <Helmet>
           <html lang="en" />
           <title>{data.site.siteMetadata.title}</title>

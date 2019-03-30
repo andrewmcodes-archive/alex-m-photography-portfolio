@@ -1,4 +1,4 @@
-@tailwind preflight;
+@tailwind base;
 
 @tailwind components;
 
@@ -21,27 +21,27 @@
 }
 
 .btn {
-  @apply font-semibold tracking-wide py-4 px-6 rounded no-underline uppercase;
+  @apply font-semibold tracking-wider py-4 px-6 rounded no-underline uppercase;
 }
 
 .btn-blue {
-  @apply bg-grey-darkest text-white;
+  @apply bg-indigo-500 text-white;
 }
 
 .btn-blue:hover {
-  @apply bg-black shadow-md;
-}
-
-.d-container {
-  @apply w-full mx-auto;
+  @apply bg-indigo-600 shadow-lg;
 }
 
 .link {
-  @apply no-underline text-blue-darker;
+  @apply no-underline text-indigo-600;
 }
 
 .nav-spacer {
   margin-top: 55px;
+}
+
+.d-container {
+  @apply w-full mx-auto;
 }
 
 @screen sm {
@@ -61,4 +61,8 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+h1 {
+  @apply text-4xl font-bold;
 }
