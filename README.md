@@ -34,3 +34,5 @@ yarn serve
 ## License
 
 [MIT](/LICENSE.md)
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fandrewmcodes%2Falex-m-photography-portfolio.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fandrewmcodes%2Falex-m-photography-portfolio?ref=badge_large)
