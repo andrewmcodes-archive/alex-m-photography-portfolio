@@ -1,5 +1,7 @@
 # Alex McCutcheon Photography Portfolio
 
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fandrewmcodes%2Falex-m-photography-portfolio.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fandrewmcodes%2Falex-m-photography-portfolio?ref=badge_shield)
+
 ## Prerequisites
 
 - Node > v8.2.0
