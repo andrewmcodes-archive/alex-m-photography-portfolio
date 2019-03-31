@@ -1,4 +1,6 @@
 # Alex McCutcheon Photography Portfolio
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fandrewmcodes%2Falex-m-photography-portfolio.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fandrewmcodes%2Falex-m-photography-portfolio?ref=badge_shield)
+
 
 ## Prerequisites
 
@@ -19,3 +21,7 @@ To test the CMS locally, you'll need run a production build of the site:
 $ npm run build
 $ npm run serve
 ```
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fandrewmcodes%2Falex-m-photography-portfolio.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fandrewmcodes%2Falex-m-photography-portfolio?ref=badge_large)
