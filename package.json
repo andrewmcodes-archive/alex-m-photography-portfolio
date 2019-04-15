@@ -43,7 +43,7 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\""
   },
   "devDependencies": {
-    "prettier": "1.16.4",
+    "prettier": "1.17.0",
     "rimraf": "^2.6.2"
   }
 }
