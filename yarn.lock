@@ -13993,7 +13993,7 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
-tailwindcss@^1.0.0-beta.4:
+tailwindcss@^1.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-1.1.0.tgz#c582a192e4976953eb54d59be4e8c6c9486ea5a6"
   integrity sha512-hcxY5MUrY/LcdsX4Xr2aOF24eF4HaxDbHCbDu3W2+bCJRsXRhJmZfAgjipjsyhZult0YAa9HFp14xRXMqwUYTw==
