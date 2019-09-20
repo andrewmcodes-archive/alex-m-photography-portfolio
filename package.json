@@ -5,7 +5,7 @@
   "author": "Andrew Mason",
   "dependencies": {
     "babel-plugin-tailwind-components": "^0.5.10",
-    "gatsby": "^2.3.4",
+    "gatsby": "^2.15.19",
     "gatsby-image": "^2.0.37",
     "gatsby-plugin-netlify": "^2.0.13",
     "gatsby-plugin-netlify-cms": "^3.0.17",
