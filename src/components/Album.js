@@ -9,7 +9,7 @@ class Album extends React.Component {
     const { edges: photographs } = data.allMarkdownRemark
 
     return (
-      <div className='flex justify-between flex-wrap'>
+      <div className='w-full mx-auto flex justify-between flex-wrap'>
         {photographs &&
           photographs.map(({ node: photograph }) => (
             <div className='card' key={photograph.id}>

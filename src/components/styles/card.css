@@ -1,13 +1,13 @@
 .lg-card {
-  @apply w-3/4 mx-auto rounded overflow-hidden shadow-lg bg-gray-100 my-8;
+  @apply w-full mx-auto overflow-hidden shadow-lg bg-gray-100 my-8;
 }
 
 .card {
-  @apply max-w-sm rounded overflow-hidden shadow-lg bg-gray-100 my-2;
+  @apply mx-auto max-w-sm overflow-hidden shadow-lg bg-gray-100 my-2;
 }
 
 .card-img {
-  @apply w-full;
+  @apply w-full bg-gray-900;
 }
 
 .card-body {

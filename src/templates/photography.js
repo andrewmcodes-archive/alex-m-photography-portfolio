@@ -17,13 +17,13 @@ export const PhotographyTemplate = ({
   const PhotoContent = contentComponent || Content
 
   return (
-    <section className='w-screen'>
+    <section className='w-screen px-4'>
       {helmet || ''}
       <div className='lg-card'>
         <div className='card-body'>
           <h1 className='card-header'>{title}</h1>
           <p className='card-content'>{description}</p>
-          <PhotoContent content={content} />
+          <PhotoContent content={content} className={'text-gray-900'} />
           {tags && tags.length ? (
             <div style={{ marginTop: `4rem` }}>
               <ul className=''>
