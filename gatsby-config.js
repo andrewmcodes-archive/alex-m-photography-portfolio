@@ -1,13 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: 'AEM Photography',
-    description: "Alex McCutcheon's Photography Portfolio",
+    title: 'AEM Photographygraphy',
+    description: "Alex McCutcheon's Photographygraphy Portfolio"
   },
   plugins: [
-    'gatsby-plugin-postcss',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-tailwindcss',
+    'gatsby-plugin-postcss',
     {
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/static/img`,
@@ -65,12 +65,10 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-purgecss',
+      resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
-        tailwind: true,
-        whitelist: ['background'],
-        // develop: true,
-        // purgeOnly: ['/main.css'],
+        develop: false, // Activates purging in npm run develop
+        purgeOnly: ['/all.css'], // applies purging only on the bulma css file
       },
     },
     'gatsby-plugin-netlify',

@@ -1,85 +1,75 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import logo from '../img/logo/white-logo.svg'
 
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
-
-    this.toggleNavbar = this.toggleNavbar.bind(this)
-    this.closeNavbar = this.closeNavbar.bind(this)
     this.state = {
-      collapsed: true,
+      active: false,
+      navBarActiveClass: '',
     }
   }
 
-  closeNavbar() {
-    if (this.state.collapsed === true) {
-      this.toggleNavbar()
-    }
-  }
-
-  toggleNavbar() {
-    const el = document.getElementById('nav')
-    el.classList.toggle('block')
-    el.classList.toggle('hidden')
-    console.log(window.outerWidth)
-    if (window.outerWidth <= 589) {
-      el.classList.toggle('shadow-inner')
-      const el2 = document.getElementById('navbar')
-      el2.classList.toggle('bg-white')
-      const el3 = document.getElementById('nav-brand')
-      el3.classList.toggle('text-indigo-600')
-      const el4 = document.getElementById('nav-btn')
-      el4.classList.toggle('border-indigo-600')
-      el4.classList.toggle('text-indigo-600')
-    }
+  toggleHamburger = () => {
+    // toggle the active boolean in the state
+    this.setState(
+      {
+        active: !this.state.active,
+      },
+      // after state has been updated,
+      () => {
+        // set the class in state for the navbar accordingly
+        this.state.active
+          ? this.setState({
+              navBarActiveClass: 'is-active',
+            })
+          : this.setState({
+              navBarActiveClass: '',
+            })
+      }
+    )
   }
 
   render() {
     return (
-      <nav id="navbar" className="z-10 absolute w-full md:mb-16">
-        <div className="flex flex-wrap items-center justify-between max-w-6xl mx-auto ">
-          <Link
-            to="/"
-            id="nav-brand"
-            className="flex items-center no-underline text-white p-4 md:p-8 sm:hover:text-white antialiased">
-            <span className="font-semibold text-xl tracking-wider">
-              AEM Photography
-            </span>
-          </Link>
-          <button
-            id="nav-btn"
-            className="mr-4 sm:mr-8 block sm:hidden border border-white hover:bg-white hover:text-blue-900 focus:bg-blue-700 focus:text-gray-100 flex items-center px-3 py-2 rounded text-white"
-            onClick={this.toggleNavbar}>
-            <svg
-              className="fill-current h-3 w-3"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg">
-              <title> Menu </title>
-              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-            </svg>
-          </button>
+      <nav
+        className=""
+        role="navigation"
+        aria-label="main-navigation"
+      >
+        <div className="">
+          <div className="">
+            <Link to="/" className="" title="Logo">
+              <img src={logo} alt="AEM" style={{ width: '88px' }} />
+            </Link>
+            {/* Hamburger menu */}
+            <div
+              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
+              data-target="navMenu"
+              onClick={() => this.toggleHamburger()}
+            >
+              <span />
+              <span />
+              <span />
+            </div>
+          </div>
           <div
-            id="nav"
-            className="text-center hidden sm:flex sm:items-center w-full sm:w-auto">
-            <div className="text-sm font-semibold">
-              <Link
-                to="/"
-                className="antialiased block py-6 sm:inline-block sm:mt-0 sm:mr-12 no-underline text-blue-700 sm:text-white"
-                onClick={this.toggleNavbar}>
-                Home
-              </Link>
-              <Link
-                to="/about"
-                className="antialiased block sm:inline-block py-6 sm:mt-0 sm:mr-12 no-underline text-blue-700 sm:text-white"
-                onClick={this.toggleNavbar}>
+            id="navMenu"
+            className={`navbar-menu ${this.state.navBarActiveClass}`}
+          >
+            <div className="">
+              <Link className="" to="/about">
                 About
               </Link>
-              <Link
-                to="/blog"
-                className="antialiased block sm:inline-block py-6 sm:mt-0 sm:mr-12 no-underline text-blue-700 sm:text-white"
-                onClick={this.toggleNavbar}>
-                Blog
+              <Link className="" to="/photography">
+                Photography
+              </Link>
+              <Link className="" to="/contact">
+                Contact
+              </Link>
+              <Link className="" to="/contact/examples">
+                Form Examples
               </Link>
             </div>
           </div>
@@ -88,4 +78,5 @@ const Navbar = class extends React.Component {
     )
   }
 }
+
 export default Navbar

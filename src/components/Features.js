@@ -1,16 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 const FeatureGrid = ({ gridItems }) => (
-  <div className="flex flex-wrap w-full">
+  <div className="">
     {gridItems.map(item => (
-      <div className="w-1/2">
-        <div key={item.text} className="m-2 rounded bg-white shadow-md">
-          <div className="p-4">
-            <p>{item.text}</p>
+      <div key={item.text} className="">
+        <section className="">
+          <div className="">
+            <div
+              style={{
+                width: '240px',
+                display: 'inline-block',
+              }}
+            >
+              <PreviewCompatibleImage imageInfo={item} />
+            </div>
           </div>
-        </div>
+          <p>{item.text}</p>
+        </section>
       </div>
     ))}
   </div>

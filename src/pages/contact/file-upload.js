@@ -43,9 +43,9 @@ export default class Contact extends React.Component {
   render() {
     return (
       <Layout>
-        <section className="section">
-          <div className="container">
-            <div className="content">
+        <section className="">
+          <div className="">
+            <div className="">
               <h1>File Upload</h1>
               <form
                 name="file-upload"
@@ -53,7 +53,8 @@ export default class Contact extends React.Component {
                 action="/contact/thanks/"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
-                onSubmit={this.handleSubmit}>
+                onSubmit={this.handleSubmit}
+              >
                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                 <input type="hidden" name="form-name" value="file-upload" />
                 <div hidden>
@@ -62,13 +63,13 @@ export default class Contact extends React.Component {
                     <input name="bot-field" onChange={this.handleChange} />
                   </label>
                 </div>
-                <div className="field">
-                  <label className="label" htmlFor={'name'}>
+                <div className="">
+                  <label className="" htmlFor={'name'}>
                     Your name
                   </label>
-                  <div className="control">
+                  <div className="">
                     <input
-                      className="input"
+                      className=""
                       type={'text'}
                       name={'name'}
                       onChange={this.handleChange}
@@ -77,23 +78,23 @@ export default class Contact extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="field">
-                  <div className="file">
-                    <label className="file-label">
+                <div className="">
+                  <div className="">
+                    <label className="">
                       <input
-                        className="file-input"
+                        className=""
                         type="file"
                         name="attachment"
                         onChange={this.handleAttachment}
                       />
-                      <span className="file-cta">
-                        <span className="file-label">Choose a file…</span>
+                      <span className="">
+                        <span className="">Choose a file…</span>
                       </span>
                     </label>
                   </div>
                 </div>
-                <div className="field">
-                  <button className="button is-link" type="submit">
+                <div className="">
+                  <button className="" type="submit">
                     Send
                   </button>
                 </div>

@@ -8,12 +8,20 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <div className="nav-spacer">
-      <div className="text-white py-8 px-4 sm:px-0 leading-loose mx-auto w-full sm:w-3/4 md:w-1/2">
-        <h1 className="text-center mb-4">{title}</h1>
-        <PageContent className="content h-full" content={content} />
+    <section className="">
+      <div className="">
+        <div className="">
+          <div className="">
+            <div className="">
+              <h2 className="">
+                {title}
+              </h2>
+              <PageContent className="" content={content} />
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   )
 }
 

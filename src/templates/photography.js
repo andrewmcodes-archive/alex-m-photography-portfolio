@@ -6,38 +6,34 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-export const BlogPostTemplate = ({
+export const PhotographyTemplate = ({
   content,
   contentComponent,
   description,
   tags,
-  imageUrl,
   title,
   helmet,
 }) => {
   const PostContent = contentComponent || Content
 
   return (
-    <section className="section">
+    <section className="">
       {helmet || ''}
-      <div className="container content">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-300">
+      <div className="">
+        <div className="">
+          <div className="">
+            <h1 className="">
               {title}
             </h1>
-            <img src={imageUrl} alt="" />
-            <p> {description} </p> <PostContent content={content} />
+            <p>{description}</p>
+            <PostContent content={content} />
             {tags && tags.length ? (
-              <div
-                style={{
-                  marginTop: `4rem`,
-                }}>
-                <h4> Tags </h4>
-                <ul className="taglist">
+              <div style={{ marginTop: `4rem` }}>
+                <h4>Tags</h4>
+                <ul className="">
                   {tags.map(tag => (
                     <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}> {tag} </Link>
+                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                     </li>
                   ))}
                 </ul>
@@ -50,27 +46,26 @@ export const BlogPostTemplate = ({
   )
 }
 
-BlogPostTemplate.propTypes = {
+PhotographyTemplate.propTypes = {
   content: PropTypes.node.isRequired,
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  imageUrl: PropTypes.string,
   helmet: PropTypes.object,
 }
 
-const BlogPost = ({ data }) => {
+const Photography = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
-      <BlogPostTemplate
+      <PhotographyTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Blog">
-            <title> {`${post.frontmatter.title}`} </title>
+          <Helmet titleTemplate="%s | Photography">
+            <title>{`${post.frontmatter.title}`}</title>
             <meta
               name="description"
               content={`${post.frontmatter.description}`}
@@ -79,22 +74,21 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
-        imageUrl={post.frontmatter.imageUrl}
       />
     </Layout>
   )
 }
 
-BlogPost.propTypes = {
+Photography.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
 }
 
-export default BlogPost
+export default Photography
 
 export const pageQuery = graphql`
-  query BlogPostByID($id: String!) {
+  query PhotographyByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
       html
@@ -103,7 +97,6 @@ export const pageQuery = graphql`
         title
         description
         tags
-        imageUrl
       }
     }
   }
