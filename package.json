@@ -1,5 +1,5 @@
 {
-  "name": "alex-m-Photographygraphy-portfolio",
+  "name": "alex-m-photography-portfolio",
   "description": "Alex McCutcheons Photgraphy Portfolio",
   "version": "0.1.0",
   "author": "Andrew Mason",
@@ -32,7 +32,7 @@
     "uuid": "^3.2.1"
   },
   "keywords": [
-    "Photographygraphy"
+    "Photography"
   ],
   "license": "MIT",
   "main": "n/a",

@@ -2,14 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import SectionWrapper from '../components/SectionWrapper'
 import Content, { HTMLContent } from '../components/Content'
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section className=''>
-      <h2 className=''>{title}</h2>
+    <section className='w-full'>
+      <h2 className='text-center'>{title}</h2>
       <PageContent className='' content={content} />
     </section>
   )
@@ -23,14 +24,15 @@ AboutPageTemplate.propTypes = {
 
 const AboutPage = ({ data }) => {
   const { markdownRemark: post } = data
-
   return (
     <Layout>
-      <AboutPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
-      />
+      <SectionWrapper>
+        <AboutPageTemplate
+          contentComponent={HTMLContent}
+          title={post.frontmatter.title}
+          content={post.html}
+        />
+      </SectionWrapper>
     </Layout>
   )
 }
