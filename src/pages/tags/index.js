@@ -8,21 +8,18 @@ const TagsPage = ({
   data: {
     allMarkdownRemark: { group },
     site: {
-      siteMetadata: { title },
-    },
-  },
+      siteMetadata: { title }
+    }
+  }
 }) => (
   <Layout>
-    <section className="">
+    <section className=''>
       <Helmet title={`Tags | ${title}`} />
-      <div className="">
-        <div className="">
-          <div
-            className=""
-            style={{ marginBottom: '6rem' }}
-          >
-            <h1 className="">Tags</h1>
-            <ul className="">
+      <div className=''>
+        <div className=''>
+          <div className='' style={{ marginBottom: '6rem' }}>
+            <h1 className=''>Tags</h1>
+            <ul className=''>
               {group.map(tag => (
                 <li key={tag.fieldValue}>
                   <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>

@@ -1,13 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import logo from '../img/logo/white-logo.svg'
 
 const Navbar = class extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       active: false,
-      navBarActiveClass: '',
+      navBarActiveClass: ''
     }
   }
 
@@ -15,63 +14,64 @@ const Navbar = class extends React.Component {
     // toggle the active boolean in the state
     this.setState(
       {
-        active: !this.state.active,
+        active: !this.state.active
       },
       // after state has been updated,
       () => {
         // set the class in state for the navbar accordingly
         this.state.active
           ? this.setState({
-              navBarActiveClass: 'is-active',
+              navBarActiveClass: ''
             })
           : this.setState({
-              navBarActiveClass: '',
+              navBarActiveClass: 'nav-block'
             })
       }
     )
   }
 
-  render() {
+  render () {
     return (
-      <nav
-        className=""
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="">
-          <div className="">
-            <Link to="/" className="" title="Logo">
-              <img src={logo} alt="AEM" style={{ width: '88px' }} />
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
-          <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
+      <nav className='nav' role='navigation' aria-label='main-navigation'>
+        <div className='nav-brand-container'>
+          <Link to='/' className='nav-brand-text' title='Logo'>
+            AEM Photography
+          </Link>
+        </div>
+        <div className='nav-btn-container'>
+          <button
+            className='nav-btn'
+            data-target='navMenu'
+            onClick={() => this.toggleHamburger()}
           >
-            <div className="">
-              <Link className="" to="/about">
-                About
-              </Link>
-              <Link className="" to="/photography">
-                Photography
-              </Link>
-              <Link className="" to="/contact">
-                Contact
-              </Link>
-              <Link className="" to="/contact/examples">
-                Form Examples
-              </Link>
-            </div>
+            <svg
+              class='nav-btn-svg'
+              viewBox='0 0 20 20'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <title>Menu</title>
+              <path d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z' />
+            </svg>
+          </button>
+        </div>
+
+        <div
+          id='navMenu'
+          className={`nav-list-container ${this.state.navBarActiveClass}`}
+        >
+          <div className='nav-list'>
+            <Link className='nav-list-item' to='/about'>
+              About
+            </Link>
+            <Link className='nav-list-item' to='/photography'>
+              Photography
+            </Link>
+            <Link className='nav-list-item' to='/contact'>
+              Contact
+            </Link>
+            <Link className='nav-list-item' to='/contact/examples'>
+              Form Examples
+            </Link>
           </div>
         </div>
       </nav>

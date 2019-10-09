@@ -38,14 +38,14 @@
   "main": "n/a",
   "scripts": {
     "clean": "gatsby clean",
-    "start": "npm run develop",
-    "build": "npm run clean && gatsby build",
-    "develop": "npm run clean && gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "start": "yarn run develop",
+    "build": "yarn run clean && gatsby build",
+    "develop": "yarn run clean && gatsby develop",
+    "format": "yarn run prettier-standard src/**/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.18.2",
+    "prettier-standard": "^15.0.1",
     "tailwindcss": "^1.1.2"
   }
 }

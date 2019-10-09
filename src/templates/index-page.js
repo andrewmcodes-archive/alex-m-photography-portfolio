@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
-
+// import logo from '../img/logo/white-logo.svg'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import Album from '../components/Album'
@@ -13,65 +13,47 @@ export const IndexPageTemplate = ({
   subheading,
   mainpitch,
   description,
-  intro,
+  intro
 }) => (
   <div>
     <div
-      className=""
+      className=''
       style={{
         backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
+          image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
         backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
+        backgroundAttachment: `fixed`
       }}
     >
       <div>
-        <h1 className="">
-          {title}
-        </h1>
-        <h3 className="">
-          {subheading}
-        </h3>
+        <h1 className=''>{title}</h1>
+        <h3 className=''>{subheading}</h3>
       </div>
     </div>
-    <section className="">
-      <div className="">
-        <div className="">
-          <div className="">
-            <div className="">
-              <div className="">
-                <div className="">
-                  <div className="">
-                    <h1 className="">{mainpitch.title}</h1>
-                  </div>
-                  <div className="">
-                    <h3 className="">{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div className="">
-                  <div className="">
-                    <h3 className="">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="">
-                  <h3 className="">
-                    Latest photos
-                  </h3>
-                  <Album />
-                  <div className="">
-                    <Link className="" to="/photography">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <section className=''>
+      <div className=''>
+        <div className=''>
+          <h1 className=''>{mainpitch.title}</h1>
+        </div>
+        <div className=''>
+          <h3 className=''>{mainpitch.description}</h3>
+        </div>
+      </div>
+      <div className=''>
+        <div className=''>
+          <h3 className=''>{heading}</h3>
+          <p>{description}</p>
+        </div>
+      </div>
+      <Features gridItems={intro.blurbs} />
+      <div className=''>
+        <h3 className=''>Latest photos</h3>
+        <Album />
+        <div className=''>
+          <Link className='' to='/photography'>
+            Read more
+          </Link>
         </div>
       </div>
     </section>
@@ -86,8 +68,8 @@ IndexPageTemplate.propTypes = {
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
+    blurbs: PropTypes.array
+  })
 }
 
 const IndexPage = ({ data }) => {
@@ -111,9 +93,9 @@ const IndexPage = ({ data }) => {
 IndexPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
+      frontmatter: PropTypes.object
+    })
+  })
 }
 
 export default IndexPage

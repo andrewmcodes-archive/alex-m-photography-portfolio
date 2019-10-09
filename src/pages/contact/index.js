@@ -2,14 +2,14 @@ import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../components/Layout'
 
-function encode(data) {
+function encode (data) {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&')
 }
 
 export default class Index extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = { isValidated: false }
   }
@@ -26,43 +26,43 @@ export default class Index extends React.Component {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': form.getAttribute('name'),
-        ...this.state,
-      }),
+        ...this.state
+      })
     })
       .then(() => navigate(form.getAttribute('action')))
       .catch(error => alert(error))
   }
 
-  render() {
+  render () {
     return (
       <Layout>
-        <section className="">
-          <div className="">
-            <div className="">
+        <section className=''>
+          <div className=''>
+            <div className=''>
               <h1>Contact</h1>
               <form
-                name="contact"
-                method="post"
-                action="/contact/thanks/"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
+                name='contact'
+                method='post'
+                action='/contact/thanks/'
+                data-netlify='true'
+                data-netlify-honeypot='bot-field'
                 onSubmit={this.handleSubmit}
               >
                 {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                <input type="hidden" name="form-name" value="contact" />
+                <input type='hidden' name='form-name' value='contact' />
                 <div hidden>
                   <label>
                     Don’t fill this out:{' '}
-                    <input name="bot-field" onChange={this.handleChange} />
+                    <input name='bot-field' onChange={this.handleChange} />
                   </label>
                 </div>
-                <div className="">
-                  <label className="" htmlFor={'name'}>
+                <div className=''>
+                  <label className='' htmlFor={'name'}>
                     Your name
                   </label>
-                  <div className="">
+                  <div className=''>
                     <input
-                      className=""
+                      className=''
                       type={'text'}
                       name={'name'}
                       onChange={this.handleChange}
@@ -71,13 +71,13 @@ export default class Index extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="">
-                  <label className="" htmlFor={'email'}>
+                <div className=''>
+                  <label className='' htmlFor={'email'}>
                     Email
                   </label>
-                  <div className="">
+                  <div className=''>
                     <input
-                      className=""
+                      className=''
                       type={'email'}
                       name={'email'}
                       onChange={this.handleChange}
@@ -86,13 +86,13 @@ export default class Index extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="">
-                  <label className="" htmlFor={'message'}>
+                <div className=''>
+                  <label className='' htmlFor={'message'}>
                     Message
                   </label>
-                  <div className="">
+                  <div className=''>
                     <textarea
-                      className=""
+                      className=''
                       name={'message'}
                       onChange={this.handleChange}
                       id={'message'}
@@ -100,8 +100,8 @@ export default class Index extends React.Component {
                     />
                   </div>
                 </div>
-                <div className="">
-                  <button className="" type="submit">
+                <div className=''>
+                  <button className='' type='submit'>
                     Send
                   </button>
                 </div>

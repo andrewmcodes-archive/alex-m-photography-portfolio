@@ -4,17 +4,15 @@ import Layout from '../../components/Layout'
 import Album from '../../components/Album'
 
 export default class PhotographyIndexPage extends React.Component {
-  render() {
+  render () {
     return (
       <Layout>
-        <div className="">
-          <h1 className="" >
-            Latest Stories
-          </h1>
+        <div className=''>
+          <h1 className=''>Latest Stories</h1>
         </div>
-        <section className="">
-          <div className="">
-            <div className="">
+        <section className=''>
+          <div className=''>
+            <div className=''>
               <Album />
             </div>
           </div>

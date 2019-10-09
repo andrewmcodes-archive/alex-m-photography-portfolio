@@ -1,0 +1,74 @@
+.nav {
+  @apply flex items-center justify-between flex-wrap bg-gray-900 p-6;
+}
+
+.nav-brand-container {
+  @apply flex items-center flex-shrink-0 text-white mr-6;
+}
+
+.nav-brand-text {
+  @apply font-semibold text-xl tracking-tight;
+}
+
+.nav-btn-container {
+  @apply block;
+}
+
+@screen lg {
+  .nav-btn-container {
+    @apply hidden;
+  }
+}
+
+.nav-btn {
+  @apply flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400;
+}
+
+.nav-btn:hover {
+  @apply text-white border-white;
+}
+
+.nav-btn-svg {
+  @apply fill-current h-3 w-3;
+}
+
+.nav-list-container {
+  @apply w-full flex-grow hidden;
+}
+
+@screen lg {
+  .nav-list-container {
+    @apply flex items-center w-auto;
+  }
+}
+.nav-list {
+  @apply text-sm;
+}
+
+@screen lg {
+  .nav-list {
+    @apply flex-grow;
+  }
+}
+
+.nav-list-item {
+  @apply block mt-4 text-gray-200 mr-4;
+}
+
+.nav-list-item:hover {
+  @apply text-white;
+}
+
+@screen lg {
+  .nav-list-item {
+    @apply inline-block mt-0;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.nav-block {
+  display: block !important;
+}

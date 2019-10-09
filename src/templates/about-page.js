@@ -8,19 +8,9 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section className="">
-      <div className="">
-        <div className="">
-          <div className="">
-            <div className="">
-              <h2 className="">
-                {title}
-              </h2>
-              <PageContent className="" content={content} />
-            </div>
-          </div>
-        </div>
-      </div>
+    <section className=''>
+      <h2 className=''>{title}</h2>
+      <PageContent className='' content={content} />
     </section>
   )
 }
@@ -28,7 +18,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
 AboutPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
-  contentComponent: PropTypes.func,
+  contentComponent: PropTypes.func
 }
 
 const AboutPage = ({ data }) => {
@@ -46,7 +36,7 @@ const AboutPage = ({ data }) => {
 }
 
 AboutPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired
 }
 
 export default AboutPage

@@ -12,35 +12,30 @@ export const PhotographyTemplate = ({
   description,
   tags,
   title,
-  helmet,
+  helmet
 }) => {
   const PostContent = contentComponent || Content
 
   return (
-    <section className="">
+    <section className=''>
       {helmet || ''}
-      <div className="">
-        <div className="">
-          <div className="">
-            <h1 className="">
-              {title}
-            </h1>
-            <p>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length ? (
-              <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
-                <ul className="">
-                  {tags.map(tag => (
-                    <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ) : null}
+
+      <div className=''>
+        <h1 className=''>{title}</h1>
+        <p>{description}</p>
+        <PostContent content={content} />
+        {tags && tags.length ? (
+          <div style={{ marginTop: `4rem` }}>
+            <h4>Tags</h4>
+            <ul className=''>
+              {tags.map(tag => (
+                <li key={tag + `tag`}>
+                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
+        ) : null}
       </div>
     </section>
   )
@@ -51,7 +46,7 @@ PhotographyTemplate.propTypes = {
   contentComponent: PropTypes.func,
   description: PropTypes.string,
   title: PropTypes.string,
-  helmet: PropTypes.object,
+  helmet: PropTypes.object
 }
 
 const Photography = ({ data }) => {
@@ -64,10 +59,10 @@ const Photography = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate="%s | Photography">
+          <Helmet titleTemplate='%s | Photography'>
             <title>{`${post.frontmatter.title}`}</title>
             <meta
-              name="description"
+              name='description'
               content={`${post.frontmatter.description}`}
             />
           </Helmet>
@@ -81,8 +76,8 @@ const Photography = ({ data }) => {
 
 Photography.propTypes = {
   data: PropTypes.shape({
-    markdownRemark: PropTypes.object,
-  }),
+    markdownRemark: PropTypes.object
+  })
 }
 
 export default Photography

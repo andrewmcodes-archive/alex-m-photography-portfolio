@@ -4,15 +4,15 @@ import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class Album extends React.Component {
-  render() {
+  render () {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="">
+      <div className=''>
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="" key={post.id}>
+            <div className='' key={post.id}>
               <article
                 className={`photography-list-item tile is-child box notification ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
@@ -20,33 +20,28 @@ class Album extends React.Component {
               >
                 <header>
                   {post.frontmatter.featuredimage ? (
-                    <div className="">
+                    <div className=''>
                       <PreviewCompatibleImage
                         imageInfo={{
                           image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.title}`,
+                          alt: `featured image thumbnail for post ${post.title}`
                         }}
                       />
                     </div>
                   ) : null}
-                  <p className="">
-                    <Link
-                      className=""
-                      to={post.fields.slug}
-                    >
+                  <p className=''>
+                    <Link className='' to={post.fields.slug}>
                       {post.frontmatter.title}
                     </Link>
                     <span> &bull; </span>
-                    <span className="">
-                      {post.frontmatter.date}
-                    </span>
+                    <span className=''>{post.frontmatter.date}</span>
                   </p>
                 </header>
                 <p>
                   {post.excerpt}
                   <br />
                   <br />
-                  <Link className="" to={post.fields.slug}>
+                  <Link className='' to={post.fields.slug}>
                     Keep Reading →
                   </Link>
                 </p>
@@ -61,9 +56,9 @@ class Album extends React.Component {
 Album.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
-      edges: PropTypes.array,
-    }),
-  }),
+      edges: PropTypes.array
+    })
+  })
 }
 
 export default () => (
