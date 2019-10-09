@@ -3,7 +3,7 @@
 }
 
 .nav-brand-container {
-  @apply flex items-center flex-shrink-0 text-white mr-6;
+  @apply flex items-center text-white mr-6;
 }
 
 .nav-brand-text {
@@ -14,7 +14,7 @@
   @apply block;
 }
 
-@screen lg {
+@screen md {
   .nav-btn-container {
     @apply hidden;
   }
@@ -33,10 +33,10 @@
 }
 
 .nav-list-container {
-  @apply w-full flex-grow hidden;
+  @apply w-full hidden;
 }
 
-@screen lg {
+@screen md {
   .nav-list-container {
     @apply flex items-center w-auto;
   }
@@ -45,7 +45,7 @@
   @apply text-sm;
 }
 
-@screen lg {
+@screen md {
   .nav-list {
     @apply flex-grow;
   }
@@ -59,7 +59,7 @@
   @apply text-white;
 }
 
-@screen lg {
+@screen md {
   .nav-list-item {
     @apply inline-block mt-0;
   }

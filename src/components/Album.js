@@ -6,46 +6,43 @@ import PreviewCompatibleImage from './PreviewCompatibleImage'
 class Album extends React.Component {
   render () {
     const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
+    const { edges: photographs } = data.allMarkdownRemark
 
     return (
-      <div className=''>
-        {posts &&
-          posts.map(({ node: post }) => (
-            <div className='' key={post.id}>
-              <article
-                className={`photography-list-item tile is-child box notification ${
-                  post.frontmatter.featuredpost ? 'is-featured' : ''
-                }`}
-              >
-                <header>
-                  {post.frontmatter.featuredimage ? (
-                    <div className=''>
-                      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: post.frontmatter.featuredimage,
-                          alt: `featured image thumbnail for post ${post.title}`
-                        }}
-                      />
-                    </div>
-                  ) : null}
-                  <p className=''>
-                    <Link className='' to={post.fields.slug}>
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
-                    <span className=''>{post.frontmatter.date}</span>
-                  </p>
-                </header>
-                <p>
-                  {post.excerpt}
+      <div className='flex justify-between flex-wrap'>
+        {photographs &&
+          photographs.map(({ node: photograph }) => (
+            <div className='card' key={photograph.id}>
+              {photograph.frontmatter.featuredimage ? (
+                <div className='card-image'>
+                  <PreviewCompatibleImage
+                    imageInfo={{
+                      image: photograph.frontmatter.featuredimage,
+                      alt: `featured image thumbnail for photograph ${
+                        photograph.title
+                      }`
+                    }}
+                  />
+                </div>
+              ) : null}
+              <div className='card-body'>
+                <p className='card-header'>
+                  <Link className='' to={photograph.fields.slug}>
+                    {photograph.frontmatter.title}
+                  </Link>
+                  <span> &bull; </span>
+                  <span className=''>{photograph.frontmatter.date}</span>
+                </p>
+
+                <p className='card-content'>
+                  {photograph.excerpt}
                   <br />
                   <br />
-                  <Link className='' to={post.fields.slug}>
-                    Keep Reading →
+                  <Link className='' to={photograph.fields.slug}>
+                    See More →
                   </Link>
                 </p>
-              </article>
+              </div>
             </div>
           ))}
       </div>
@@ -80,7 +77,6 @@ export default () => (
                 title
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
-                featuredpost
                 featuredimage {
                   childImageSharp {
                     fluid(maxWidth: 120, quality: 100) {

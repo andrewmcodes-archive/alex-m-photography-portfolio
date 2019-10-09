@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 // import logo from '../img/logo/white-logo.svg'
+import photoSession from '../img/photo-session.svg'
 import Layout from '../components/Layout'
-import Features from '../components/Features'
 import Album from '../components/Album'
+import SectionWrapper from '../components/SectionWrapper'
 
 export const IndexPageTemplate = ({
   image,
@@ -16,47 +17,38 @@ export const IndexPageTemplate = ({
   intro
 }) => (
   <div>
-    <div
-      className=''
-      style={{
-        backgroundImage: `url(${
-          image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`
-      }}
-    >
-      <div>
-        <h1 className=''>{title}</h1>
-        <h3 className=''>{subheading}</h3>
-      </div>
-    </div>
-    <section className=''>
-      <div className=''>
-        <div className=''>
-          <h1 className=''>{mainpitch.title}</h1>
+    <SectionWrapper>
+      <section className='text-gray-100'>
+        <img src={photoSession} className='w-2/3 mx-auto' alt='header' />
+        <h1 className=''>{heading}</h1>
+        <h4 className=''>{subheading}</h4>
+      </section>
+    </SectionWrapper>
+    <section className='bg-indigo-600 mt-8 py-8 text-gray-100'>
+      <SectionWrapper>
+        <div className='md:flex'>
+          <div className='w-full md:w-1/3 mr-auto'>
+            <h2 className=''>{mainpitch.title}</h2>
+          </div>
+          <div className='w-full md:w-1/2'>
+            <p className=''>{mainpitch.description}</p>
+          </div>
         </div>
-        <div className=''>
-          <h3 className=''>{mainpitch.description}</h3>
-        </div>
-      </div>
-      <div className=''>
-        <div className=''>
-          <h3 className=''>{heading}</h3>
-          <p>{description}</p>
-        </div>
-      </div>
-      <Features gridItems={intro.blurbs} />
-      <div className=''>
-        <h3 className=''>Latest photos</h3>
-        <Album />
-        <div className=''>
-          <Link className='' to='/photography'>
-            Read more
-          </Link>
-        </div>
-      </div>
+      </SectionWrapper>
     </section>
+    <SectionWrapper>
+      <section className='text-gray-100 my-8'>
+        <div className='mt-8 text-gray-100'>
+          <h2 className='mb-4'>Latest photos</h2>
+          <Album />
+          {/* <div className=''>
+            <Link className='' to='/photography'>
+              Read more
+            </Link>
+          </div> */}
+        </div>
+      </section>
+    </SectionWrapper>
   </div>
 )
 
@@ -66,7 +58,6 @@ IndexPageTemplate.propTypes = {
   heading: PropTypes.string,
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
-  description: PropTypes.string,
   intro: PropTypes.shape({
     blurbs: PropTypes.array
   })
@@ -83,7 +74,6 @@ const IndexPage = ({ data }) => {
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
         mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
         intro={frontmatter.intro}
       />
     </Layout>
@@ -118,7 +108,6 @@ export const pageQuery = graphql`
           title
           description
         }
-        description
         intro {
           blurbs {
             image {

@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar'
 // CSS
 import './styles/all.css'
 import './styles/navbar.css'
+import './styles/card.css'
 // END CSS
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'

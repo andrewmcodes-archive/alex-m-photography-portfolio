@@ -14,28 +14,28 @@ export const PhotographyTemplate = ({
   title,
   helmet
 }) => {
-  const PostContent = contentComponent || Content
+  const PhotoContent = contentComponent || Content
 
   return (
-    <section className=''>
+    <section className='w-screen'>
       {helmet || ''}
-
-      <div className=''>
-        <h1 className=''>{title}</h1>
-        <p>{description}</p>
-        <PostContent content={content} />
-        {tags && tags.length ? (
-          <div style={{ marginTop: `4rem` }}>
-            <h4>Tags</h4>
-            <ul className=''>
-              {tags.map(tag => (
-                <li key={tag + `tag`}>
-                  <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ) : null}
+      <div className='lg-card'>
+        <div className='card-body'>
+          <h1 className='card-header'>{title}</h1>
+          <p className='card-content'>{description}</p>
+          <PhotoContent content={content} />
+          {tags && tags.length ? (
+            <div style={{ marginTop: `4rem` }}>
+              <ul className=''>
+                {tags.map(tag => (
+                  <li key={tag + `tag`} className='card-tag'>
+                    <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+        </div>
       </div>
     </section>
   )
